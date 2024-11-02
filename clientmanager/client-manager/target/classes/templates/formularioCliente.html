@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulário de Cliente</title>
+</head>
+<body>
+<h1>Formulário de Cliente</h1>
+<form th:action="@{/clientes}" th:object="${cliente}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <label for="razaoSocial">Razão Social:</label>
+    <input type="text" id="razaoSocial" th:field="*{razaoSocial}" /><br>
+
+    <label for="nomeFantasia">Nome Fantasia:</label>
+    <input type="text" id="nomeFantasia" th:field="*{nomeFantasia}" /><br>
+
+    <label for="cnpjCpf">CNPJ/CPF:</label>
+    <input type="text" id="cnpjCpf" th:field="*{cnpjCpf}" /><br>
+
+    <label for="telefonesContato">Telefones:</label>
+    <input type="text" id="telefonesContato" th:field="*{telefonesContato}" /><br>
+
+    <label for="status">Status:</label>
+    <input type="text" id="status" th:field="*{status}" /><br>
+
+    <button type="submit">Salvar</button>
+</form>
+</body>
+</html>
